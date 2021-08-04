@@ -42,16 +42,16 @@ Iniciar todos os serviços:
 #### 1.2 - Utilizar ```docker cp``` para fazer a cópia dos arquivos para o namenome, através do segunite script:
    
    ```
-   docker cp HIST_PAINEL_COVIDBR_2020_Parte1_06jul2021.csv namenode:/
+   docker cp 2020_01.csv namenode:/
    ```
    ```
-   docker cp HIST_PAINEL_COVIDBR_2020_Parte2_06jul2021.csv namenode:/
+   docker cp 2020_02.csv namenode:/
    ```
    ```
-   docker cp HIST_PAINEL_COVIDBR_2021_Parte1_06jul2021.csv namenode:/
+   docker cp 2021_01.csv namenode:/
    ```
    ```
-   docker cp HIST_PAINEL_COVIDBR_2021_Parte2_06jul2021.csv namenode:/
+   docker cp 2021_02.csv namenode:/
    ```
    
 #### 1.3 - Entrar no container namenode ```docker exec -it namenode bash``` e listar os arquivos através do ```ls```
@@ -61,19 +61,19 @@ Iniciar todos os serviços:
 #### 1.4 -De dentro do namenode, criar a seguinte estrutura de pasta **hdfs:/user/projeto/semantix** através do comando ```hdfs dfs -mkdir user/projeto/semantix ``` e enviar os arquivos para o HDFS através dos comandos:
    
    ```
-   hdfs dfs -put HIST_PAINEL_COVIDBR_2020_Parte1_06jul2021.csv /user/projeto/semantix
+   hdfs dfs -put 2020_01.csv /user/matheus/projetoS
    ```
    ```
-   hdfs dfs -put HIST_PAINEL_COVIDBR_2020_Parte2_06jul2021.csv /user/projeto/semantix
+   hdfs dfs -put 2020_02.csv /user/matheus/projetoS
    ```
    ```
-   hdfs dfs -put HIST_PAINEL_COVIDBR_2021_Parte1_06jul2021.csv /user/projeto/semantix
+   hdfs dfs -put 2021_01.csv /user/matheus/projetoS
    ```
    ```
-   hdfs dfs -put HIST_PAINEL_COVIDBR_2021_Parte2_06jul2021.csv /user/projeto/semantix
+   hdfs dfs -put 2021_02.csv /user/matheus/projetoS
    ```
    
-#### 1.5 - Conferir se arquivos foram devidamente salvos no HDFS através de ``` hdfs dfs -ls /user/projeto/semantix```
+#### 1.5 - Conferir se arquivos foram devidamente salvos no HDFS através de ``` hdfs dfs -ls /user/matheus/projetoS/```
    
    ![foto04_projeto_dev](https://user-images.githubusercontent.com/62483710/125338881-1e820800-e327-11eb-9d54-ade20e33fa21.PNG)
 
@@ -83,7 +83,7 @@ Iniciar todos os serviços:
 Ainda no container do namenode, dar um ```hdfs dfs -cat <file> | head ``` para visualizar o formato do arquivo e seu cabeçalho.
 
 ```
-hdfs dfs -cat /user/projeto/semantix/HIST_PAINEL_COVIDBR_2021_Parte1_06jul2021.csv | head
+hdfs dfs -cat /user/matheus/projetoS/2020_01.csv | head
 ```
 
 ![foto07_projeto](https://user-images.githubusercontent.com/62483710/125356531-b6d6b780-e33c-11eb-8bfd-50af6c0c6954.PNG)
@@ -152,7 +152,7 @@ Utilizando o Jupyter Notebook através da porta localhost: 8889.
 #### 3.1 - Listar arquivos no hive/warehouse
 
 ```
-! hdfs dfs -ls /user/hive/warehouse/
+hdfs dfs -ls /user/hive/warehouse
 ```
 
 ![foto08_spark](https://user-images.githubusercontent.com/62483710/125826064-3a052972-b69a-490e-8d61-2f3ee61d2d7e.PNG)
