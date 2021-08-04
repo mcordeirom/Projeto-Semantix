@@ -17,11 +17,23 @@ Referência das visualizações:
 
 ---
 
-*O projeto foi realizado utilizando Docker e Docker-Compose através do WSL2*
+*O projeto foi realizado dentro de um Cluster no Docker, passos para o up desse Cluster a seguir*
 
-Primeiramente, entrar na pasta onde estão instalados os arquivos docker-compose e inicializar os serviços através do ```docker-compose up -d```
+Primeiramente, Baixar conteudo do Cluster:
 
-Os arquivos .yml estão disponíveis em : XXXXX
+``git clone https://github.com/rodrigo-reboucas/docker-bigdata.git spark``
+
+Baixar as imagens:
+
+``docker-compose -f docker-compose-parcial.yml pull``
+
+
+Iniciar todos os serviços:
+
+``docker-compose -f docker-compose-parcial.yml up –d``
+
+![image](https://user-images.githubusercontent.com/44096461/128101947-75f0d682-a36e-4693-b608-b552cdd553ba.png)
+
 
 ### 1. Enviar os dados para o hdfs
 
