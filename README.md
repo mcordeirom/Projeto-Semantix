@@ -1,19 +1,10 @@
 # projeto_semantix
 ## Campanha Nacional de vacinação contra COVID
 
-O projeto foi dividido em dois níveis, básico e avançado. Recomendo fortemente fazer primeiro o básico e se sobrar tempo, pode aventurar no avançado.
+O projeto foi dividido em dois níveis, básico e avançado. Esse projeto engloba parcialmente o nivel basico.
 
-Os exercícios podem ser feitos em qualquer linguagem e todas as questões são bem abertas, tendo várias formas de serem realizadas e interpretadas, pois a idéia é não termos projetos iguais.
+Os exercícios foram feitos utilizando python notebooks e alguns comandos direto no terminal.
 
-O projeto deve estar no *github.com*, a forma de organizar o conteúdo é por sua conta, caso nunca tenha usado, este já é seu primeiro desafio.
-
-Ao final do projeto você precisa preencher o formulário com o seu nome completo, e-mail utilizado no treinamento e o link do github do seu projeto.
-
--Link do formulário para envio: https://forms.office.com/Pages/ResponsePage.aspx?id=2H_OZbilA0GZftoGjNhf1Y4a9bNsmMNEil2MBcFKJolUMFlTQVBNUVhRTVlSNVJUUDBWM0ZIRDVKQS4u
-
-O formulário também estará na página do treinamento.
-
-OBS: Todas as imagens de exemplo (Visualizações) são apenas para referencias, o projeto irá ter valores diferentes e as formas de se criar tabelas com dataframe/dataset das visualizações, pode ser realizado da maneira que preferir.
 
 ---
 ## Nível Básico
@@ -416,45 +407,4 @@ view3.saveToEs("view3_elastic")
 
 ---
 
-## Nível Avançado:
 
-Replicar as visualizações do site “https://covid.saude.gov.br/”, porém acessando diretamente a API de Elastic.
-
-Link oficial para todas as informações: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao
-
-#### Informações para se conectar ao cluster:
-
-  • URL https://imunizacao-es.saude.gov.br/desc-imunizacao 
-  
-  • Nome do índice: desc-imunizacao 
-  
-  • Credenciais de acesso 
-  
-      o Usuário: imunizacao_public 
-      
-      o Senha: qlto5t&7r_@+#Tlstigi 
-
-#### Links utéis para a resolução do problema:
-
-##### Consumo do API:
-  
-https://opendatasus.saude.gov.br/dataset/b772ee55-07cd-44d8-958f-b12edd004e0b/resource/5916b3a4-81e7-4ad5-adb6-b884ff198dc1/download/manual_api_vacina_covid-19.pdf
-
-##### Conexão do Spark com Elastic:
-  
-https://www.elastic.co/guide/en/elasticsearch/hadoop/current/spark.html
-
-https://docs.databricks.com/data/data-sources/elasticsearch.html#elasticsearch-notebook
-
-https://github.com/elastic/elasticsearch-hadoop
-
-https://www.elastic.co/guide/en/elasticsearch/hadoop/current/configuration.html
-
-##### Instalar Dependências:
-  
-https://www.elastic.co/guide/en/elasticsearch/hadoop/current/install.html
-
----
-
-
-Desenvolvido por Rodrigo Rebouças
